@@ -1,1 +1,1 @@
-import './partials/styles.css';
+import './styles.css';
