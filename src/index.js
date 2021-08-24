@@ -1,3 +1,3 @@
-import  './home-work/styles.css';
-import './home-work/js/menu.js';
+import  './css/styles.css';
+import './js/menu.js';
  
