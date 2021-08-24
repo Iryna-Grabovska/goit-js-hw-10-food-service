@@ -1,12 +1,9 @@
-
-import menuTpl from "../templates/menu.hbs";
-console.log(menuTpl);
 import menu from "./menu.json";
-console.log(menuTpl(menu));
+import menuTpl from "../templates/menu.hbs";
 
-function greatMenu(menu) {
-  return menu.map(menuTpl).join("");
-  
-}
-const greatItems = document.createElement("ul");
-greatItems.appendChild(menu);
+const menuRef = document.querySelector('.js-menu');
+console.log(menuRef);
+const lessons = menuTpl(menu);
+menuRef.insertAdjacentHTML('beforeend', lessons);
+
+
