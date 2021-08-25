@@ -14,13 +14,19 @@ menuRef.insertAdjacentHTML('beforeend', lessons);
 const themeSwitch = document.querySelector('#theme-switch-toggle');
 console.log(themeSwitch);
 themeSwitch.addEventListener('change', (e) => {
-  // if (e) {
-  //   e.classList.add('light-theme');
+  console.log(e);
+  if (e !== "dark-theme") {
+    document.body.classList.add('dark-theme');
+            document.body.classList.remove('light -theme');
 
-  //   e.classList.remove('dark-theme');
-  //   return;
+    localStorage.setItem('class', 'dark-theme')
+    return;
+  }
+      document.body.classList.remove('light -theme');
 
-  // }
-  // e.classList.add('dark-theme');
-  // e.classList.remove('light-theme');
-})
+  document.body.classList.add('dark-theme');
+    localStorage.setItem('class', 'light-theme');
+        
+
+  
+  });
